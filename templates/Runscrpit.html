@@ -1,0 +1,46 @@
+{% extends 'xadmin/base_site.html' %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div style="float: left;width: 40% ">
+<h3>脚本集合</h3>
+ <hr />
+<ol>
+    {% for key in content  %}
+
+       <li> <input type="text" name='test{{ key.id }}'id="scrpit{{ key.id }}" placeholder='{{ key.param }}'  >
+        <input style="background: burlywood" type="submit" id='sum{{ key.id }}' value={{  key.Publish_name }} ></li>
+
+
+
+    {% endfor %}
+</ol>
+</div>
+<div style="float: right;width: 55% ">
+    <h3>执行结果</h3>
+ <hr />
+     <p><span id='result'></span></p>
+
+</div>
+<script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        {% for key in content  %}
+      $("#sum{{ key.id }}").click(function(){
+        var a = $("#scrpit{{ key.id }}").val();
+        var b = $("#scrpit{{ key.id }}").attr("name")
+          //显示多少脚本，就有对应的多少js函数
+        $.get("runscript",{'a':a,'b':b}, function(ret){
+
+            $('#result').html(ret)
+        })
+      });
+    {% endfor %}
+    });
+</script>
+</body>
+{% endblock %}

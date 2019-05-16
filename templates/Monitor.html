@@ -1,0 +1,52 @@
+{% extends 'xadmin/base_site.html' %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div style="float: left;width: 40% ">
+<h3>环境列表</h3>
+ <hr />
+<ol>
+    {% for key in content  %}
+
+
+       <li>  <input style="background: burlywood" type="submit" id='sum{{ key.id }}' name='scrpit{{ key.id }}' value={{  key.Publish_name }} ></li>
+
+
+
+    {% endfor %}
+</ol>
+</div>
+<div style="float: right;width: 55% ">
+    <h3>服务状态</h3>
+ <hr />
+     <p><span id='result'></span></p>
+
+</div>
+<script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        {% for key in content  %}
+      $("#sum{{ key.id }}").click(function(){
+
+        var b = $("#sum{{ key.id }}").attr("name")
+          console.log(b)
+          //显示多少脚本，就有对应的多少js函数
+        $.get("monitor",{'b':b}, function(ret1){
+           var ret= new Array()
+            ret=ret1.split("\n")
+           for(var i=0;i<ret.length;i++){
+                console.log(ret[i])
+               ret[i]=ret[i]+ "<br>";
+           }
+            $('#result').html(ret)
+        })
+      });
+    {% endfor %}
+    });
+</script>
+</body>
+{% endblock %}

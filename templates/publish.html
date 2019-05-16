@@ -1,0 +1,53 @@
+{% extends 'xadmin/base_site.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <div style="float: left;width: 40% ">
+ <h3>服务集合</h3>
+ <hr />
+    {% for key in content  %}
+
+       <li> <input type="text" name='test{{ key.id }}'id="scrpit{{ key.id }}" placeholder='{{ key.param }}'  >
+        <input style="background: burlywood" type="submit" id='sum{{ key.id }}' value={{  key.Publish_name }} ></li>
+         <br>
+
+    {% endfor %}
+</div>
+<div style="float: right;width: 55% ">
+    <h3>执行结果</h3>
+ <hr />
+     <p><span id='result'></span></p>
+
+</div>
+<script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+    $(function () {
+                {% for key in content  %}
+
+        $('#sum{{ key.id }}').click(function () {
+            var socket = new WebSocket("ws://" + window.location.host + "/admin/Publish/publish");
+            console.log(socket);
+
+            var data=[$("#scrpit{{ key.id }}").val(),$("#scrpit{{ key.id }}").attr("name")] ;
+            console.log(data)
+            socket.onopen = function () {
+                console.log('WebSocket open');//成功连接上Websocket
+                socket.send(data);//发送数据到服务端
+            };
+            socket.onmessage = function (e) {
+
+                $('#result').append(e.data+'<br/>');
+
+            };
+          {% endfor %}
+        });
+
+    });
+</script>
+</body>
+</html>
+{% endblock %}
