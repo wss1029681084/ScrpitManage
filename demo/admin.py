@@ -143,7 +143,7 @@ class Serveradmin(object):
 
 
 class Publishadmin(object):
-    list_display =('Publish_name','script','param','type')
+    list_display =('Publish_name','script','host','param','type')
     #list_editable =('Publish_name','script')
 class Envadmin(object):
     list_display = ('name', 'path', 'remarks', 'createTime')

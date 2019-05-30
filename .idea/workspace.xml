@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf1a3efc-b16d-4821-816e-11ea81071aad" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/screenshots/环境配置.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/screenshots/脚本执行.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/screenshots/脚本配置.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/screenshots/账号配置.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MxOnline/settings.py" afterPath="$PROJECT_DIR$/MxOnline/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/admin.py" afterPath="$PROJECT_DIR$/demo/admin.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,8 +33,8 @@
       <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="156" column="0" lean-forward="false" selection-start-line="156" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
+            <state relative-caret-position="119">
+              <caret line="145" column="50" lean-forward="false" selection-start-line="145" selection-start-column="50" selection-end-line="145" selection-end-column="50" />
               <folding>
                 <element signature="e#43#56#0" expanded="true" />
               </folding>
@@ -35,34 +42,29 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="47" lean-forward="true" selection-start-line="0" selection-start-column="47" selection-end-line="0" selection-end-column="47" />
+                <folding />
+              </first_editor>
+              <second_editor>
+                <markdownNavigatorState />
+              </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="45" column="9" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="14" />
+            <state relative-caret-position="214">
+              <caret line="29" column="7" lean-forward="false" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="8" />
               <folding>
                 <element signature="e#42#70#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo/utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tests.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo/tests.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -107,7 +109,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="233">
@@ -115,6 +117,26 @@
               <folding>
                 <element signature="e#42#77#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manage.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/manage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MxOnline/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="42" column="4" lean-forward="false" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -146,7 +168,6 @@
         <option value="$PROJECT_DIR$/users/models.py" />
         <option value="$PROJECT_DIR$/manage.py" />
         <option value="$PROJECT_DIR$/demo/__init__.py" />
-        <option value="$PROJECT_DIR$/MxOnline/settings.py" />
         <option value="$PROJECT_DIR$/templates/functionhelp.html" />
         <option value="$PROJECT_DIR$/Utils/utils.py" />
         <option value="$PROJECT_DIR$/demo/utils.py" />
@@ -157,12 +178,13 @@
         <option value="$PROJECT_DIR$/Utils/shell.py" />
         <option value="$PROJECT_DIR$/MxOnline/urls.py" />
         <option value="$PROJECT_DIR$/demo/models.py" />
-        <option value="$PROJECT_DIR$/demo/admin.py" />
         <option value="$PROJECT_DIR$/demo/apps.py" />
         <option value="$PROJECT_DIR$/templates/publish.html" />
         <option value="$PROJECT_DIR$/templates/Monitor.html" />
         <option value="$PROJECT_DIR$/templates/Runscrpit.html" />
         <option value="$PROJECT_DIR$/demo/views.py" />
+        <option value="$PROJECT_DIR$/MxOnline/settings.py" />
+        <option value="$PROJECT_DIR$/demo/admin.py" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -174,8 +196,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="86" />
-    <option name="y" value="258" />
+    <option name="x" value="458" />
+    <option name="y" value="203" />
     <option name="width" value="1678" />
     <option name="height" value="845" />
   </component>
@@ -218,7 +240,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
+              <option name="myItemId" value="screenshots" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -263,11 +285,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\wss11416\PycharmProjects\YjManage\screenshots" />
       <recent name="C:\Users\wss11416\PycharmProjects\MxOnline\Utils" />
       <recent name="C:\Users\wss11416\PycharmProjects\MxOnline\demo" />
       <recent name="C:\Users\wss11416\PycharmProjects\MxOnline" />
       <recent name="C:\Users\wss11416\PycharmProjects\MxOnline\templates" />
-      <recent name="C:\Users\wss11416\PycharmProjects\MxOnline\extra_apps" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -618,9 +640,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="86" y="258" width="1678" height="845" extended-state="0" />
+    <frame x="458" y="203" width="1678" height="845" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25896168" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25896168" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959327" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -808,39 +831,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MxOnline/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding>
-            <marker date="1557045789051" expanded="true" signature="941:1193" ph="..." />
-            <marker date="1557045789051" expanded="true" signature="1210:1607" ph="..." />
-            <marker date="1557045789051" expanded="true" signature="1655:2190" ph="..." />
-            <marker date="1557045789051" expanded="true" signature="1661:2187" ph="..." />
-            <marker date="1557045789051" expanded="true" signature="1864:2180" ph="..." />
-            <marker date="1557045789051" expanded="true" signature="1900:2169" ph="..." />
-            <marker date="1557045789051" expanded="true" signature="2242:2316" ph="..." />
-            <marker date="1557045789051" expanded="true" signature="2331:2457" ph="..." />
-            <marker date="1557045789051" expanded="true" signature="2348:2455" ph="..." />
-            <marker date="1557045789051" expanded="true" signature="2461:2561" ph="..." />
-            <marker date="1557045789051" expanded="true" signature="2591:2985" ph="..." />
-            <marker date="1557045789051" expanded="true" signature="2597:2694" ph="..." />
-            <marker date="1557045789051" expanded="true" signature="2702:2789" ph="..." />
-            <marker date="1557045789051" expanded="true" signature="2797:2885" ph="..." />
-            <marker date="1557045789051" expanded="true" signature="2893:2982" ph="..." />
-            <marker date="1557045789051" expanded="true" signature="2989:3064" ph="..." />
-            <marker date="1557045789051" expanded="true" signature="3162:3262" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MxOnline/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="329">
@@ -866,6 +856,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="93">
           <caret line="70" column="6" lean-forward="false" selection-start-line="70" selection-start-column="6" selection-end-line="70" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -877,26 +868,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="156" column="0" lean-forward="false" selection-start-line="156" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
-          <folding>
-            <element signature="e#43#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="45" column="9" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="14" />
-          <folding>
-            <element signature="e#42#70#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -920,14 +891,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="17" column="47" lean-forward="false" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -958,11 +921,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MxOnline/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="42" column="4" lean-forward="false" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="29" column="7" lean-forward="false" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="8" />
+          <folding>
+            <element signature="e#42#70#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="145" column="50" lean-forward="false" selection-start-line="145" selection-start-column="50" selection-end-line="145" selection-end-column="50" />
+          <folding>
+            <element signature="e#43#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="437">
-            <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="47" lean-forward="true" selection-start-line="0" selection-start-column="47" selection-end-line="0" selection-end-column="47" />
             <folding />
           </first_editor>
           <second_editor>

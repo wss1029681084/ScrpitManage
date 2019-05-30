@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'xadmin',
     'crispy_forms',
     'demo',
-    'bootstrap3',
+   # 'bootstrap3',
 
 ]
 
