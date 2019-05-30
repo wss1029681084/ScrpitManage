@@ -13,9 +13,11 @@
     {% for key in content  %}
 
        <li> <input type="text" name='test{{ key.id }}'id="scrpit{{ key.id }}" placeholder='{{ key.param }}'  >
+               <select id="env">
+                    {% for host in env  %}
+<option value="{{ host.name }}"selected>{{ host.name }}</option>
+{% endfor %}
         <input style="background: burlywood" type="submit" id='sum{{ key.id }}' value={{  key.Publish_name }} ></li>
-
-
 
     {% endfor %}
 </ol>
@@ -33,8 +35,10 @@
       $("#sum{{ key.id }}").click(function(){
         var a = $("#scrpit{{ key.id }}").val();
         var b = $("#scrpit{{ key.id }}").attr("name")
+        var c = $("#env").val();
+        console.log(c);
           //显示多少脚本，就有对应的多少js函数
-        $.get("runscript",{'a':a,'b':b}, function(ret){
+        $.get("runscript",{'a':a,'b':b,'c':c}, function(ret){
 
             $('#result').html(ret)
         })

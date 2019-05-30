@@ -21,7 +21,7 @@ class ScriptView(CommAdminView):
         context["title"] = title
         context["breadcrumbs"].append({'url': '/admin/', 'title': title})
         context["content"]=models.Publish.objects.filter(type="RunScrpit").values()
-
+        context["env"]=models.Env.objects.values()
         return render(request, "Runscrpit.html", context)
 
 
@@ -32,7 +32,7 @@ class PublishView(CommAdminView):
         context["title"] = title
         context["breadcrumbs"].append({'url': '/admin/', 'title': title})
         context["content"] = models.Publish.objects.filter(type="CodePublish").values()
-
+        context["env"] = models.Env.objects.values()
         return render(request, "publish.html", context)
 
 
@@ -43,7 +43,7 @@ class MonitorView(CommAdminView):
         context["title"] = title
         context["breadcrumbs"].append({'url': '/admin/', 'title': title})
         context["content"] = models.Publish.objects.filter(type="Monitor").values()
-
+        context["env"] = models.Env.objects.values()
         return render(request, "Monitor.html", context)
 def runscript(request):
             key=request.GET['a']
@@ -51,9 +51,10 @@ def runscript(request):
             print("-------"+value)
             id = re.findall("\d+", value)[0]
             hostid=models.Publish.objects.filter(id=id).values("host_id")[0]["host_id"]
-
+            env=request.GET['c']
+            path=models.Env.objects.filter(name=env).values()[0]["path"]
             script = models.Publish.objects.filter(id=id).values("script")[0]["script"]
-            newscrpit = str(script).replace("CMD", str(key))
+            newscrpit =path+ str(script).replace("CMD", str(key))
 
             result=shell.xshell(hostid,newscrpit)
             if result !=[]:
@@ -71,9 +72,10 @@ def publish(request):
         value=data[1]  #传的testid
         id = re.findall("\d+", value)[0]
         hostid = models.Publish.objects.filter(id=id).values("host_id")[0]["host_id"]
-
+        env = data[2]
+        path = models.Env.objects.filter(name=env).values()[0]["path"]
         script = models.Publish.objects.filter(id=id).values("script")[0]["script"]
-        newscrpit = str(script).replace("CMD", str(key))
+        newscrpit = path+str(script).replace("CMD", str(key))
         print(newscrpit)
         shell.xshelllong(request, newscrpit,hostid)
 
@@ -83,9 +85,11 @@ def monitor(request):
     print("-------" + value)
     id = re.findall("\d+", value)[0]
     hostid = models.Publish.objects.filter(id=id).values("host_id")[0]["host_id"]
-
+    env = request.GET['c']
+    path = models.Env.objects.filter(name=env).values()[0]["path"]
     script = models.Publish.objects.filter(id=id).values("script")[0]["script"]
-    result = shell.xshell(hostid, script)
+    newscrpit = path + str(script)
+    result = shell.xshell(hostid, newscrpit)
     if result != []:
         print(result)
         return HttpResponse(result)

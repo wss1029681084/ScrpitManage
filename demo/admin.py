@@ -145,7 +145,8 @@ class Serveradmin(object):
 class Publishadmin(object):
     list_display =('Publish_name','script','param','type')
     #list_editable =('Publish_name','script')
-
+class Envadmin(object):
+    list_display = ('name', 'path', 'remarks', 'createTime')
 
 
 
@@ -154,7 +155,7 @@ xadmin.site.register(views.CommAdminView, GlobalSetting)
 
 xadmin.site.register(models.Publish,Publishadmin)
 xadmin.site.register(models.Server,Serveradmin)
-
+xadmin.site.register(models.Env,Envadmin)
 from .views import ScriptView,MonitorView,PublishView
 xadmin.site.register_view(r'Publish/$', PublishView, name='for_test')
 xadmin.site.register_view(r'Runscrpit/$', ScriptView ,name='for_test1')

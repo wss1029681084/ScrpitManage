@@ -12,6 +12,11 @@
     {% for key in content  %}
 
        <li> <input type="text" name='test{{ key.id }}'id="scrpit{{ key.id }}" placeholder='{{ key.param }}'  >
+                <select id="env">
+                    {% for host in env  %}
+<option value="{{ host.name }}"selected>{{ host.name }}</option>
+{% endfor %}
+</select>
         <input style="background: burlywood" type="submit" id='sum{{ key.id }}' value={{  key.Publish_name }} ></li>
          <br>
 
@@ -32,7 +37,7 @@
             var socket = new WebSocket("ws://" + window.location.host + "/admin/Publish/publish");
             console.log(socket);
 
-            var data=[$("#scrpit{{ key.id }}").val(),$("#scrpit{{ key.id }}").attr("name")] ;
+            var data=[$("#scrpit{{ key.id }}").val(),$("#scrpit{{ key.id }}").attr("name"),$("#env").val()] ;
             console.log(data)
             socket.onopen = function () {
                 console.log('WebSocket open');//成功连接上Websocket

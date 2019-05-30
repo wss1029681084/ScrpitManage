@@ -16,7 +16,7 @@ class  Server(models.Model):
     createTime = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
     class Meta:
        db_table = 'Server'
-       verbose_name_plural ="服务器用户"
+       verbose_name_plural ="账号配置"
 
     def __str__(self):
        return self.server_name
@@ -34,15 +34,15 @@ class Publish(models.Model):
     type=models.CharField(verbose_name='发布类型',choices=choices,max_length=50,)
 
     class Meta:
-        verbose_name = '发布脚本'
-        verbose_name_plural = '发布'
+        verbose_name = '脚本配置'
+        verbose_name_plural = '脚本配置'
 
     def __str__(self):
         return self.Publish_name
-# class Function(models.Model):
-#     class Meta:
-#         verbose_name = u"自定义"
-#         verbose_name_plural = verbose_name
-
-    def __unicode__(self):
-        return self.Meta.verbose_name
+class Env(models.Model):
+    name=models.CharField(max_length=50,verbose_name='环境名称')
+    path = models.CharField(max_length=500, verbose_name='环境路径')
+    remarks = models.CharField(max_length=500, verbose_name='备注')
+    createTime = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
+    class Meta:
+       verbose_name_plural ="环境配置"
