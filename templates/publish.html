@@ -5,13 +5,59 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<style type="text/css">
+@-webkit-keyframes flash {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+        color: #ff0000;
+        font-size: 18px;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes flash {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+        color: #ff0000;
+        font-size: 18px;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.flash{
+    position: relative;
+    top: 10px;
+    left: 10px;
+    width: 200px;
+    color: #0000ff;
+    -webkit-animation:flash 1.5s infinite  cubic-bezier(1,0,0.5,0) ;
+    animation:flash 1.5s infinite  cubic-bezier(1,0,0.5,0) ;
+}
+     #state{display: none;padding-top: 15px;}
+     #sucess{display: none;padding-top: 15px;}
+    h4  {color: red}
+
+</style>
+
+
+
+
+
 <body>
  <div style="float: left;width: 40% ">
  <h3>服务集合</h3>
  <hr />
     {% for key in content  %}
 
-       <li> <input type="text" name='test{{ key.id }}'id="scrpit{{ key.id }}" placeholder='{{ key.param }}'  >
+       <li> <input type="text" name='test{{ key.id }}'id="scrpit{{ key.id }}" value='{{ key.param }}'  >
                 <select id="env">
                     {% for host in env  %}
 <option value="{{ host.name }}"selected>{{ host.name }}</option>
@@ -23,17 +69,26 @@
     {% endfor %}
 </div>
 <div style="float: right;width: 55% ">
-    <h3>执行结果</h3>
- <hr />
+
+    <div ><h3>执行结果</h3></div>
+    <div id="state"  class="flash">发布中...</div>
+    <div id="sucess"  ><h4>发布完成</h4></div>
+
+<hr />
+      <div id="content" style="background-color:#EEEEEE;height:400px;width:800px;float:left;position:relative;overflow-x:scroll; overflow-y:auto;scroll ">
      <p><span id='result'></span></p>
+          </div>
+
 
 </div>
 <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
+
     $(function () {
                 {% for key in content  %}
-
+        var div = document.getElementById('content');
         $('#sum{{ key.id }}').click(function () {
+            document.getElementById("state").style.display = "block";
             var socket = new WebSocket("ws://" + window.location.host + "/admin/Publish/publish");
             console.log(socket);
 
@@ -43,14 +98,23 @@
                 console.log('WebSocket open');//成功连接上Websocket
                 socket.send(data);//发送数据到服务端
             };
+
             socket.onmessage = function (e) {
 
                 $('#result').append(e.data+'<br/>');
+                div.scrollTop = div.scrollHeight;
+
+                if(e.data=="发布结束，部署成功！"){
+
+                   document.getElementById("state").style.display = "none";
+                   document.getElementById("sucess").style.display = "block";
+                }
 
             };
-          
+
+
         });
-          {% endfor %}
+         {% endfor %}
     });
 </script>
 </body>
