@@ -2,4 +2,4 @@ xadmin==2.0.1
 requests==2.18.4
 paramiko==2.4.1
 dwebsocket==0.4.2
-Django==2.1.4
+Django==2.2.10
